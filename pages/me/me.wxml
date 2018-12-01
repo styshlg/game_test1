@@ -1,0 +1,67 @@
+<!--pages/me/index.wxml-->
+<view class="page">
+  <view class="user-card">
+    <view class="user-card__info">
+      <view class="user-card__head"><open-data type="userAvatarUrl" ></open-data></view>
+      <!--<text class="user-card__name">{{userInfo.nickName}}</text>-->
+      <view class="user-card__name"><open-data type="userNickName"></open-data></view>
+      <!--<button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">获取用户信息</button>-->
+    </view>
+    <view class="user-card__links">
+      <view class="user-card__linkItem" bindtap="linkToTodos">
+        <label class="user-card__linkLabel">今日单词</label>
+        <text class="user-card__linkValue">{{day_task}}</text>
+      </view>
+      <view class="user-card__linkItem" bindtap="linkToTodos">
+        <label class="user-card__linkLabel"> 已背单词</label>
+        <text class="user-card__linkValue">{{have_done}}</text>
+      </view>
+      <view class="user-card__linkItem" bindtap="linkToNotes">
+        <label class="user-card__linkLabel"> 总词数</label>
+        <text class="user-card__linkValue">{{word_num}}</text>
+      </view>
+    </view>
+  </view>
+
+<view class="item_line">
+   <view class="itemcard" bindtap="my_cizu">
+   <image style="width: 25px; height: 25px; background-color: #fff;" mode="scaleToFill" src="../../images/mine.png"></image>
+   　学词组
+   </view>
+      <view class="itemcard"  bindtap="my_collect">
+   <image style="width: 25px; height: 25px; background-color: #fff;" mode="scaleToFill" src="../../images/sc2.png"></image>
+   　生词本
+   </view>
+   <view class="itemcard" bindtap="test_card">
+   <image style="width: 25px; height: 25px; background-color: #fff;" mode="scaleToFill" src="../../images/test.png"></image>
+   　词汇测试</view>
+      <view class="itemcard" bindtap="test_card2">
+   <image style="width: 25px; height: 25px; background-color: #fff;" mode="scaleToFill" src="../../images/book.png"></image>
+   　语法测试</view>
+    <view class="itemcard" bindtap="test_card3">
+   <image style="width: 25px; height: 25px; background-color: #fff;" mode="scaleToFill" src="../../images/mine.png"></image>
+   　单词周计划</view>
+   <view class="itemcard"   bindtap="choice_book">
+   <image style="width: 25px; height: 25px;background-color: #fff;" mode="scaleToFill" src="../../images/book.png"></image>
+   　选词汇书</view>
+    <view class="itemcard" bindtap="suggestion">
+  <image style="width: 25px; height: 25px; background-color: #fff;" mode="scaleToFill" src="../../images/about.png"></image>
+   　一个提议</view>
+   <view class="itemcard" bindtap="about_me">
+  <image style="width: 25px; height: 25px; background-color: #fff;" mode="scaleToFill" src="../../images/new.png"></image>
+   　关于程序</view>
+     <view class="itemcard" bindtap="page_test">
+  <image style="width: 25px; height: 25px; background-color: #fff;" mode="scaleToFill" src="../../images/new.png"></image>
+   　测试页面</view>
+ <view wx:if="{{yes}}" class="have_done">
+    <view class="first_notice">选新的词汇书，会覆盖之前的学习计划哦！</view>
+    <view class="start_botton" bindtap="cancle">
+       <view class="look_me">取消</view>
+    </view>
+        <view class="cancle_botton" bindtap="choice">
+       <view class="look_me">确定</view>
+    </view>
+</view>
+</view>
+    
+</view>

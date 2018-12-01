@@ -1,0 +1,54 @@
+<view clas="page">
+ <!-- <view class="num_notice">{{true_num}}</view> -->
+<!-- <view  class="job_day"> -->
+
+<!-- </view> -->
+ <!-- <image class="sc2" mode="scaleToFill" src="../../images/ji.png"></image> -->
+<view wx:if="{{!(showDaan)}}" class="content">
+  <view class="day_num">{{true_num+1+".  "}}{{title}}</view>
+   <view class="button-1" bindtap="timu_choice4" data-productid="4" id="{{da4}}">
+      <text class="word-miss" >{{da4}}</text>
+    </view>
+    <view class="button-2" bindtap="timu_choice3" data-productid="3" id="{{da3}}" >
+      <text class="word-miss" >{{da3}}</text>
+    </view>
+        <view class="button-3" bindtap="timu_choice2" data-productid="2" id="{{da2}}" >
+      <text class="word-miss" >{{da2}}</text>
+    </view>
+        <view class="button-4" bindtap="timu_choice1" data-productid="1" id="{{da1}}" >
+      <text class="word-miss" >{{da1}}</text>
+    </view>
+</view>
+
+<view wx:if="{{showDaan}}" class="content" >
+ <view class="day_num">{{true_num+1+".  "}}{{title}}</view>
+   <view class="button-1"  data-productid="4" id="{{da4}}">
+      <text class="word-miss" >{{da4}}</text>
+    </view>
+    <view class="button-2"  data-productid="3" id="{{da3}}" >
+      <text class="word-miss" >{{da3}}</text>
+    </view>
+        <view class="button-3"  data-productid="2" id="{{da2}}" >
+      <text class="word-miss" >{{da2}}</text>
+    </view>
+        <view class="button-4"  data-productid="1" id="{{da1}}" >
+      <text class="word-miss" >{{da1}}</text>
+    </view>
+      <view class="result_text" id="{{da1}}">
+      <text class="word-miss1" >{{result}}</text>
+    </view> 
+    <view  class="previous_btn" bindtap="previous">
+      <text class="word-miss" >上一个</text>
+    </view>
+     <view wx:if="{{daan}}" class="right_btn"  id="{{da1}}">
+      <text class="word-miss" >回答正确</text>
+    </view>
+       <view wx:if="{{!(daan)}}" class="wrong_btn" id="{{da1}}">
+      <text class="word-miss" >回答错误</text>
+    </view>
+       <view wx:if="{{!(complete)}}" class="next_btn" bindtap="next" >
+      <text class="word-miss" >下一个</text>
+    </view> 
+</view> 
+</view>
+ 

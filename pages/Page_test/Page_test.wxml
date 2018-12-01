@@ -1,0 +1,55 @@
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" current="{{swiperCurrent}}" bindchange="swiperChange">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+           <navigator url="{{item.link}}" hover-class="navigator-hover">
+            <image src="{{item.url}}"   class="slide-image" bindtap="swipclick"  mode="scaleToFill"/>
+           </navigator> 
+        </swiper-item>
+      </block>
+</swiper>
+<view class="word_list">
+<view  style="font-size:60rpx ; font-weight:600; color:white;">单词学习</view>
+</view>
+<view>
+    <view class="flex-row" style="display: flex;flex-direction: row">
+        <view class="flex-view-item_1" bindtap="star_CET4">大学英语四级</view>
+        <view class="flex-view-item_1" bindtap="test2_card">大学英语六级</view>
+    </view>
+</view>
+<view>
+    <view class="flex-row" style="display: flex;flex-direction: row">
+        <!-- <image class="flex-view-item_1" src='http://pic.yupoo.com/styshlg/e36727ae/96b57f6e.jpg' bindtap="star_study"></image> -->
+        <button class="flex-view-item_1" >托福单词</button>
+    </view>
+</view>
+ <view class="word_list">
+<view  style="font-size:60rpx ; font-weight:600; color:white;">词汇练习</view>
+</view>
+<view>
+  <view class="flex-row" style="display: flex;flex-direction: row">
+        <view class="flex-view-item_1" bindtap="test7_card">语法测试</view>
+        <view class="flex-view-item_1" bindtap="test2_card">词汇测试</view>
+    </view>
+</view>
+<view>
+  <view class="flex-row" style="display: flex;flex-direction: row">
+        <view class="flex-view-item_1" bindtap="test1_card">背词条</view>
+        <view class="flex-view-item_1" bindtap="progress_Bar">学习进程</view>
+    </view>
+</view>
+<view class="word_list">
+<view  style="font-size:60rpx ; font-weight:600; color:white;">单词周计划</view>
+</view>
+<view>
+<view class="flex-row" style="display: flex;flex-direction: row">
+      <view class="flex-view-item_1" bindtap="test8_card">单词周计划</view>
+      <view class="flex-view-item_1" bindtap="reference_Book">参考用书</view>
+      </view> 
+</view>
+<view>
+<view class="flex-row" style="display: flex;flex-direction: row">
+      <view class="flex-view-item_1" bindtap="about">联系我们</view>
+      <view class="flex-view-item_1" bindtap="about">清空数据</view>    
+</view>
+</view>
+ <view class="blank"></view>

@@ -1,0 +1,88 @@
+{
+  "pages": [
+   
+    "pages/Welcome/Welcome",
+    "pages/Page_test/Page_test",
+    "pages/job/job",
+    "pages/choice/choice",
+    "pages/data/data",
+    "pages/search/search",
+    "pages/detail-word/detail-word",
+    "pages/me/me",
+    "pages/test/test",
+    "pages/collect_card/collect_card",
+    "pages/audio_test/audio_test",
+    "pages/about/about",
+    "pages/everyweekWork/English_1_list",
+    "pages/everyweekTest/week1/week1",
+    "pages/everyweekTest/week2/week2",
+    "pages/everyweekTest/week3/week3",
+    "pages/everyweekTest/week4/week4",
+    "pages/everyweekTest/week5/week5",
+    "pages/everyweekTest/week6/week6",
+    "pages/everyweekTest/week7/week7",
+    "pages/everyweekTest/week9/week9",
+    "pages/everyweekTest/week8/week8",
+    "pages/everyweekTest/week10/week10",
+    "pages/everyweekTest/week11/week11",
+    "pages/everyweekTest/week12/week12",
+    "pages/my_word/my_word",
+    "pages/suggestion/suggestion",
+    "pages/sql/sql",
+    "pages/vocabulary/vocabulary",
+    "pages/collect_phrase/collect_card",
+    "pages/danci/collect_card",
+    "pages/citiao/collect_card",
+    "pages/yufa_test/yufa_test",
+    "pages/CET4/study",
+    "pages/reference_Book/reference_Book",
+    "pages/progress_Bar/progress_Bar"
+  ],
+  "subPackages": [
+    {
+      "root": "packageA",
+      "pages": [
+        "pages/study/study"
+      ]
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "backgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "恐龙英语✠细品漫学",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#000",
+    "borderStyle": "#2ba99b",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/Page_test/Page_test",
+        "text": "首页",
+        "iconPath": "images/home1-1.png",
+        "selectedIconPath": "images/home2-2.png"
+      },
+      {
+        "pagePath": "pages/test/test",
+        "text": "练单词",
+        "iconPath": "images/search2.png",
+        "selectedIconPath": "images/search.png"
+      },
+      {
+        "pagePath": "pages/yufa_test/yufa_test",
+        "text": "学语法",
+        "iconPath": "images/more.png",
+        "selectedIconPath": "images/more.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我",
+        "iconPath": "images/about.png",
+        "selectedIconPath": "images/about.png"
+      }
+    ]
+  }
+}

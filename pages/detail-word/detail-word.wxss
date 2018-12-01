@@ -1,0 +1,74 @@
+
+.page{
+    background-color: white;
+    height: 1200rpx;
+    width: 100%;
+    background-size: cover;
+}
+.sideBar {  
+  background: red;  
+  position: fixed;  
+  width: 300px;  
+  height: 100%;  
+  top: 0;  
+  right: 0;  
+  transform: translate(300px);  
+  transition: all 0.5s ease-out;  
+}  
+.input_counter{
+  position: fixed;
+  left: 7%;
+  top: 5%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 50rpx;
+  width:86% ;
+  height: 90rpx;
+  border: 1rpx solid #4a475b;
+  align-items: center;
+  background-color: white;
+  opacity: 0.78;
+}
+.input{
+  width:85% ;
+  height: 78rpx;
+  color: black;
+  margin-top: 5rpx;
+}
+.simple_look{
+  position: fixed;
+  left: 10%;
+  top: 15%;
+  display: flex;
+  flex-direction: column;
+  width:78% ;
+  border: 1rpx solid #4a475b;
+  background-color: white;
+  opacity: 0.78;
+  padding:10px; 
+}
+.read{
+  position: fixed;
+  right: 10%;
+  top: 17%;
+  display: flex;
+  flex-direction: column;
+  width:60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+
+  background-color: white;
+  opacity: 0.78;
+}
+.sc{
+  position: fixed;
+  right: 25%;
+  top: 17%;
+  display: flex;
+  flex-direction: column;
+  width:60rpx;
+  height: 60rpx;
+
+  background-color: white;
+  opacity: 0.78;
+}

@@ -1,0 +1,142 @@
+/* pages/progress_Bar/progress_Bar.wxss */
+page {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+
+.circle-box {
+  text-align: center;
+  margin-top: 10vw;
+  flex-direction: column;
+  background-color: #2ba99b;
+}
+
+.circle {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.draw_btn {
+  width: 35vw;
+  position: absolute;
+  top: 330rpx;
+  right: 0;
+  left: 0;
+  margin: auto;
+  border: 1px #000 solid;
+  border-radius: 5vw;
+}
+.word_list{
+   width: 100%;
+   height: 80rpx;
+   flex-direction: column;
+   background-color: #2ba99b;
+   border-color: balck;
+   color:white;
+   position:center;
+   text-underline-position: center;
+   float:center;
+   background-position:center;
+   align-content: flex-start;
+   background-repeat: round;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.book_list{
+   width: 100%;
+   height: 120rpx;
+   flex-direction: column;
+   background-color: #2ba99b;
+   border-color: balck;
+   color:white;
+   position:center;
+   font-size: 50rpx;
+   font-weight: 800;
+   text-underline-position: center;
+   float:center;
+   background-position:center;
+   align-content: flex-start;
+   background-repeat: round;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+/**index.wxss**/
+/*圆环进度条文字*/
+.circle_info{
+  position: absolute; 
+  width: 100%;
+  left: 50%;
+  top: 50%; 
+  transform: translate(-50%,-50%); 
+  display: flex;  
+  align-items: center;
+  justify-content: center;
+  background-color:#0ff;
+}
+/**index.wxss**/
+/*圆环进度条文字*/
+.circle_info{
+  position: absolute; 
+  width: 100%;
+  left: 50%;
+  top: 50%; 
+  transform: translate(-50%,-50%); 
+  display: flex;  
+  align-items: center;
+  justify-content: center
+}
+.circle_dot{
+  width:16rpx;
+  height: 16rpx;  
+  border-radius: 50%;
+  background-color: #fb9126;
+} 
+.circle_txt{
+  padding-left: 10rpx;
+  color: #fff;
+  font-size: 36rpx; 
+  letter-spacing: 2rpx;
+}
+
+.progress_box{
+  position: relative;
+  width:220px;
+  height: 220px;  
+  display: flex;  
+  align-items: center;
+  justify-content: center;
+  background-color: #eee;
+}
+.progress_bg{
+  position: absolute;
+    width:220px;
+  height: 220px; 
+}
+.progress_canvas{ 
+  width:220px;
+  height: 220px; 
+} 
+.progress_text{ 
+  position: absolute; 
+  display: flex;  
+  align-items: center;
+  justify-content: center
+}
+.progress_info{   
+  font-size: 36rpx;
+  padding-left: 16rpx;
+  letter-spacing: 2rpx
+} 
+.progress_dot{
+  width:16rpx;
+  height: 16rpx;  
+  border-radius: 50%;
+  background-color: #fb9126;
+}
+
+

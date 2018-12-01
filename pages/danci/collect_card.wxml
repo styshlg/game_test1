@@ -1,0 +1,20 @@
+<template name="collect">
+   <view class="simple_look">
+   <image bindtap="read" id="{{item[3].us[0]}}" style="width: 25px; padding-right:5px;height: 25px; background-color: #fff;" mode="scaleToFill" src="../../images/yuying.png"></image>
+   {{item[1]}}<view style="color:#c7b31d">　/{{item[2].uk}}/</view></view>
+   <!-- <view class="definition">{{item[4]}}</view> -->
+   <view class="definition">{{item[5]}}</view>
+</template>
+
+<view class="pages">
+    <block wx:for="{{collect_phrase_list}}">
+         <template is="collect" data="{{item}}"/>
+    </block>
+    <!-- <view class="button-clear" catchtap="show_clear">
+      <text class="word-clear" catchtap="">清空</text>
+    </view> -->
+     <!-- <view class="button-clear" catchtap="review">
+      <text class="word-clear">复习</text>
+    </view>-->
+</view> 
+ 

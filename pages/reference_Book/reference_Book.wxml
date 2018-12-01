@@ -1,0 +1,21 @@
+<view class="book_list">
+参考书籍</view>
+<view class="word_list">
+<view  style="font-size:40rpx ; font-weight:300; color:white;">考研英语词汇分频记忆手册</view>
+</view>
+<image class="img" src="https://pic.yupoo.com/styshlg/b548df5c/9e9795a2.png" mode="widthFix"/>
+
+<view class="word_list">
+<view  style="font-size:40rpx ; font-weight:300; color:white;">上海插班生英语宝典</view>
+</view>
+<image class="img" src="https://pic.yupoo.com/styshlg/a64c3799/fa5d9cd5.png" mode="widthFix"/>
+
+<view class="word_list">
+<view  style="font-size:40rpx ; font-weight:300; color:white;">考研英语阅读攻略及分阶训练</view>
+</view>
+<image class="img" src="https://pic.yupoo.com/styshlg/ca0536ee/0c55b44f.jpg" mode="widthFix"/>
+
+<view class="word_list">
+<view  style="font-size:40rpx ; font-weight:300; color:white;">大学英语词汇精练</view>
+</view>
+<image class="img" src="https://pic.yupoo.com/styshlg/b3a9e489/4760dbd1.jpg" mode="widthFix"/>

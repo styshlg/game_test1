@@ -1,0 +1,115 @@
+/* pages/test/test.wxss */
+.page{
+  height:1400rpx;
+  background-color: white;
+  color: white
+}
+
+@font-face {
+font-family: Chalkboard;
+src: url('/assets/font/chalkboard.ttf'),
+}
+page{
+  height: 100%;
+}
+
+.blank{
+  position: flex;
+   width: 100%;
+   height:80rpx;
+   font-size: 40rpx;
+   background: white;
+   background-color: white;
+}
+.day_num{
+  position: flex;
+   width: 100%;
+   height:100rpx;
+   font-size: 40rpx;
+   background: white;
+   background-color: white;
+   text-align: center;
+   align-content: center;
+   align-items: center;
+   color: #2ba99b;
+  font-family: Chalkboard;
+   font-weight: 800;
+}
+.day_num1{
+   width: 100%;
+   margin-top: 70px;
+   font-size: 40rpx;
+   text-align: center;
+   color: black;
+  font-family: Chalkboard;
+   font-weight: 200;
+}
+.content{
+   height:795rpx;
+   background-color:white;
+   color: white;
+}
+
+.button-miss {
+  position: fixed;
+  left: 15%;
+  bottom: 110rpx;
+  display: flex;
+  flex-direction: column;
+  border-radius: 50%;
+  width: 160rpx;
+  height: 160rpx;
+  border: 1rpx solid red;
+  align-items: center;
+  background-color: white;
+}
+
+.button-miss1 {
+  position: fixed;
+  left: 65%;
+  bottom: 110rpx;
+  display: flex;
+  flex-direction: column;
+  border-radius: 50%;
+  width: 160rpx;
+  height: 160rpx;
+  border: 1rpx solid red;
+  align-items: center;
+  background-color: white;
+}
+
+.button-miss2 {
+  position: fixed;
+  left: 25%;
+  bottom: 110rpx;
+  display: flex;
+  flex-direction: column;
+  border-radius: 50%;
+  width: 160rpx;
+  height: 160rpx;
+  border: 1rpx solid red;
+  align-items: center;
+  background-color: white;
+}
+.button-next {
+  position: fixed;
+  left: 65%;
+  bottom: 110rpx;
+  display: flex;
+  flex-direction: column;
+  border-radius: 50%;
+  width: 160rpx;
+  height: 160rpx;
+  border: 1rpx solid red;
+  align-items: center;
+  background-color: white;
+}
+.word-miss {
+  margin: auto;
+  font-family: Songti TC;
+  font-size: 32rpx;
+  color:black;
+  background-color: white;
+    font-weight: 700;
+}
+

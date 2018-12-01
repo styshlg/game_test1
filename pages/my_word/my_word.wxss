@@ -1,0 +1,9 @@
+/* pages/my_word/my_word.wxss */
+@import "../choice/choice.wxss";
+@import "../collect_card/collect_card.wxss";
+.my_bg{
+  height: 1200rpx;
+  width: 100%;
+  background-color: white;
+  background-size:cover;
+}

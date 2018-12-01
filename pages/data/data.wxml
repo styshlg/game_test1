@@ -1,0 +1,69 @@
+<view wx:if="{{!(showNot)&&!(cpt)}}" class="job_day">
+  <view class="day_num">{{content}}</view>
+    <view class="pron-container">
+      <image class="pron-icon" bindtap="read" id="{{pron_audio.us[0]}}" src="/images/ji.png"></image>
+      <text class="word-pron" bindtap="read" id="{{pron_audio.us[0]}}">/{{pron.uk}}/</text>
+    </view>
+   <view class="liju_data"> {{liju}}</view>
+</view>
+<view wx:if="{{showNot}}" class="detail_card">
+<view class='page'>
+<view class="show_word">{{content}}</view>
+<view class="detail_pron">
+<image bindtap="read"style="width: 20px; height: 20px; background-color:white;" mode="scaleToFill" src="../../images/yuying.png" id="{pron_audio.uk[0]}}"></image>
+<view bindtap="read"id="{{pron_audio.uk[0]}}">英/{{pron.uk}}/</view>
+<image bindtap="read" id="{{pron_audio.us[0]}}" style="width: 20px; height: 20px; background-color:white;" mode="scaleToFill" src="../../images/yuying.png"></image>
+<view bindtap="read" id="{{pron_audio.us[0]}}">美/{{pron.us}}/</view>
+</view>
+
+<view class="detail_pron">{{definition}}</view> 
+<view class="notice_line"></view>
+<view wx:if="{{!(more)}}">
+<view class="liju_content">
+<view class="detail_word_English ">
+    <text>{{liju1}}</text>
+ </view>
+  <br />
+ <view class="detail_word_Chinese">
+    <text>{{chinese1}}</text>
+  </view>
+       <view class="detail_defin"  >{{defen[0].first}}<view style="color:red;display:inline;">　{{defen[0].mid}}　</view>{{defen[0].last}}</view>
+     <view class="detail_defin">{{defen[0].translation}}</view>
+<view style="padding-bottom:20px;"></view>
+    <view class="detail_defin"  >{{defen[1].first}}<view style="color:red;display:inline;">　{{defen[1].mid}}　</view>{{defen[1].last}}</view>
+     <view class="detail_defin">{{defen[1].translation}}</view>
+</view>
+
+</view>
+
+<view wx:if="{{more}}">
+<import src="itemtpl"/>
+<view class="liju_content">
+    <block wx:for="{{defen}}">
+         <template is="more-item" data="{{item}}"/>
+    </block>
+</view>
+</view>
+        <view class="button-miss1"  bindtap="next">
+      <text class="word-next">下一个</text>
+    </view>
+         <view class="button-miss2"  bindtap="last">
+      <text class="word-save" >上一个</text>
+    </view>
+</view>
+</view>
+<view wx:if="{{cpt}}" class="complete_bg">
+<view class="complete" >
+   <view class="congratulate">太棒啦！今天的单词都背完了！</view>
+   <view class="share"  bindtap="test"><view class="share_word">测试</view></view>
+</view>
+</view>
+<view wx:if="{{!(showNot)&&!(cpt)}}" class="content">
+   <view class="button-miss" catchtap="show">
+      <text class="word-miss" catchtap="show">不认识</text>
+    </view>
+     <view class="button-next" catchtap="show_next">
+      <text class="word-save" catchtap="show_next">认识</text>
+    </view>
+</view>
+

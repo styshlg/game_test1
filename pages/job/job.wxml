@@ -1,0 +1,65 @@
+<view class="page">
+
+<view wx:if="{{!(have_done)}}" class="have_done">
+    <view class="first_notice">那么现在，开始我们的单词之旅</view>
+    <view class="start_botton" bindtap="choice123">
+       <view class="look_me">点我</view>
+    </view>
+</view>
+   <view class="word">
+     <view style="font-size:40rpx " text-color="white">
+     Keep trying no matter how hard it seems; it will get easier.</view>
+     <!-- <view style="font-size:40rpx "text-color="white">坚持不懈，难也变易。</view> -->
+   </view>
+<view class="word_num">
+   <view class="new_word_num">{{new_word}}
+     <view  style="font-size:25rpx ; font-weight:300; color:gray;">总新词数</view>
+   </view>
+   <view class="today_word_num">{{today_word}}
+     <view style="font-size:25rpx; font-weight:300; color:gray;">今日单词</view>
+   </view>
+   <view class="lest_num">{{lest_word}}
+     <view style="font-size:25rpx; font-weight:300; color:gray; ">已背单词</view>
+   </view>
+   <view class="my_word_num">{{day_num}}
+     <view style="font-size:25rpx; font-weight:300; color:gray; ">已背天数</view>
+   </view>
+
+</view>
+<view class="star_study" bindtap="star_study">
+  <view class="star ">开始</view>
+</view>
+<view class="star_CET4" bindtap="star_CET4">
+  <view class="star ">四级</view>
+</view>
+<view class="bookline">
+   <view bindtap="test1_card" class="book1">
+   <view style="text-size:20rpx; font-weight:300; color:black;">背词条</view>
+   </view>
+   <view bindtap="test2_card" class="book2"> 
+   <view style="text-size:20rpx;font-weight:300;color:black;">练单词</view></view>
+</view>
+<view class="bookline2">
+ <view bindtap="test3_card" class="book2"> 
+   <view style="text-size:20rpx; font-weight:300;color:black;">生词本</view></view>
+<view bindtap="test4_card" class="book2"> 
+   <view style="text-size:20rpx; font-weight:300;color:black;">生词条</view></view>
+   </view>
+   <view class="bookline2">
+ <view bindtap="test5_card" class="book2"> 
+   <view style="text-size:20rpx; font-weight:300;color:black;">已背单词</view></view>
+<view bindtap="test6_card" class="book2"> 
+   <view style="text-size:20rpx; font-weight:300;color:black;">已背词条</view></view>
+   <!-- <view bindtap="test7_card" class="book3"> 
+   <view style="text-size:20rpx; font-weight:300;color:black;">学语法</view></view>
+    <view bindtap="test8_card" class="book4"> 
+   <view style="text-size:20rpx; font-weight:300;color:black;">查单词</view></view> -->
+   </view>
+   <view class="bookline2">
+ <view bindtap="test7_card" class="book2"> 
+   <view style="text-size:20rpx; font-weight:300;color:black;">学语法</view></view>
+<view bindtap="test8_card" class="book2"> 
+   <view style="text-size:20rpx; font-weight:300;color:black;">单词周计划</view></view>
+   </view>
+</view>
+

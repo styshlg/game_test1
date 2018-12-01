@@ -1,0 +1,4 @@
+<view class='itemview'> 
+<button wx:for="{{list}}"  data-id='{{index}}' bindtap='itemOnclick' class='Btn' wx:key=''>第{{index+1}}周测试</button>
+<view class='linestyle'></view>
+</view>
