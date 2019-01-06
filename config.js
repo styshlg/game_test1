@@ -4,7 +4,7 @@
 // 此处主机域名修改成腾讯云解决方案分配的域名
 
 // 此处主机域名修改成腾讯云解决方案分配的域名
-var host = 'https://konglaoshi.xyz'  //开发环境
+//var host = 'https://konglaoshi.xyz'  //开发环境
 
 var appId = 'wx0b152ea55233ac2c'
 
@@ -17,7 +17,7 @@ var config = {
     host,
 
     // 登录地址，用于建立会话
-    loginUrl: `${host}/weapp/login`,
+    // loginUrl: `${host}/weapp/login`,
     
 
     // // 测试的请求地址，用于测试会话

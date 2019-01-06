@@ -8,14 +8,15 @@
 <view>孔老师微信:Simon—KXL</view>
 </view >
 <view class="word_list">
+<view  style="font-size:40rpx ; font-weight:300; color:white;">孔老师二维码</view>
+</view>
+<view class="image_box">
+<image class="img" src="https://pic.yupoo.com/styshlg/c1a11f50/8703303b.jpg" mode="widthFix"/>
+</view>
+<view class="word_list">
 <view  style="font-size:40rpx ; font-weight:300; color:white;">孔老师头像</view>
 </view>
 <view class="image_box">
-<image class="img" src="https://pic.yupoo.com/styshlg/b8bf0875/5785026d.jpg" mode="widthFix"/>
+<image class="img" src="https://pic.yupoo.com/styshlg/b8bf0875/5785026d.jpg" bindtap="previewImage" mode="widthFix"/>
 </view>
-<view class="word_list">
-<view  style="font-size:40rpx ; font-weight:300; color:white;">孔老师微信二维码</view>
-</view>
-<view class="image_box">
-<image class="img" src="https://pic.yupoo.com/styshlg/c1a11f50/8703303b.jpg" bindtap="previewImage" mode="widthFix"/>
-</view>
+

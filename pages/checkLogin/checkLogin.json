@@ -1,0 +1,10 @@
+{
+  "backgroundTextStyle": "light",
+  "backgroundColor": "#ffffff",
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "navigation-button": "../../component/navigation/navigation"
+  }
+}

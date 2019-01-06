@@ -5,12 +5,13 @@
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tencentyun/weapp-client-demo.git"
+    "url": "https://git.qcloud.com/c2c_100005458649/xiaobai.git"
   },
   "keywords": [],
   "author": "CFETeam",
   "license": "MIT",
   "dependencies": {
-    "wafer2-client-sdk": "^1.0.0"
+    "wafer2-client-sdk": "^1.0.0",
+    "wx-server-sdk": "^0.1.3"
   }
 }

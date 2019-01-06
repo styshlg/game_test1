@@ -7,18 +7,20 @@ Page({
     step: null,
     time: null,
     stepTimer: null,
-    progress_txt: '正在匹配中...',
+    progress_txt: '已经完成' + (wx.getStorageSync('kaoyan_data_test') / wx.getStorageSync('kaoyan_length_1') * 100).toFixed(3) + '%',
     count: 0, // 设置 计数器 初始为0
     countTimer: null // 设置 定时器 初始为null
   },
   stepInterval: function () {
     // 设置倒计时 定时器
     var n = this.data.num / 2
+    //var n=20
     this.stepTimer = setInterval(() => {
       if (this.data.num >= 0) {
         this.data.step = this.data.num / n;
         // 绘制彩色圆环进度条
         this.circle.drawCircle('circle_draw', 40, 4, this.data.step)
+        //this.circle.drawCircle(this.data.count / (60 / 2))
         if ((/(^[1-9]\d*$)/.test(this.data.num / 10))) {
           // 当时间为整数秒的时候 改变时间
           this.setData({
@@ -47,15 +49,7 @@ Page({
   },
   onLoad: function () {
   },
-  // onReady: function () {
-  //   /*倒计时*/
-  //   // 获得circle组件
-  //   this.circle = this.selectComponent("#circle1");
-  //   // 绘制背景圆环
-  //   this.circle.drawCircleBg('circle_bg1', 100, 8)
-  //   // 绘制彩色圆环 
-  //   this.circle.drawCircle('circle_draw1', 100, 8, 2);  
-  // },
+
   drawCircle: function (step) {
     var context = wx.createCanvasContext('canvasProgress');
     // 设置渐变
@@ -69,7 +63,8 @@ Page({
     context.setLineCap('round')
     context.beginPath();
     // 参数step 为绘制的圆环周长，从0到2为一周 。 -Math.PI / 2 将起始角设在12点钟位置 ，结束角 通过改变 step 的值确定
-    context.arc(110, 110, 100, -Math.PI / 2, step * Math.PI - Math.PI / 2, false);
+    context.arc(110, 110, 100, -Math.PI / 2, (wx.getStorageSync('word_count') / 4063)*2* Math.PI - Math.PI / 2, false);
+    // context.arc(110, 110, 100, -Math.PI / 2,  2* Math.PI - Math.PI / 2, false);
     context.stroke();
     context.draw()
   },
@@ -80,7 +75,8 @@ Page({
     ctx.setStrokeStyle('#20183b'); // 设置圆环的颜色
     ctx.setLineCap('round') // 设置圆环端点的形状
     ctx.beginPath();//开始一个新的路径
-    ctx.arc(110, 110, 100, 0, 2 * Math.PI, false);
+    // ctx.arc(110, 110, 100, 0, 2 * Math.PI, false);
+    ctx.arc(110, 110, 100, 0, 200, false);
     //设置一个原点(100,100)，半径为90的圆的路径到当前路径
     ctx.stroke();//对当前路径进行描边
     ctx.draw();
@@ -97,7 +93,8 @@ Page({
         this.data.count++;
       } else {
         this.setData({
-          progress_txt: "匹配成功"
+         // var n = wx.getStorageSync('word_count') + 1;
+          progress_txt: '已经完成' + (wx.getStorageSync('kaoyan_data_test') / wx.getStorageSync('kaoyan_length_1')*100).toFixed(3)+'%'
         });
         clearInterval(this.countTimer);
       }
@@ -106,7 +103,7 @@ Page({
   onReady: function () {
     this.drawProgressbg();
   // drawCircle(2);
-    this.countInterval()
+   this.countInterval()
   },
 
   _runEvent() {

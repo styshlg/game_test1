@@ -1,12 +1,13 @@
 {
   "pages": [
-   
     "pages/Welcome/Welcome",
     "pages/Page_test/Page_test",
     "pages/job/job",
     "pages/choice/choice",
     "pages/data/data",
     "pages/search/search",
+    "pages/study/study",
+    "component/navigation/navigation",
     "pages/detail-word/detail-word",
     "pages/me/me",
     "pages/test/test",
@@ -36,15 +37,9 @@
     "pages/yufa_test/yufa_test",
     "pages/CET4/study",
     "pages/reference_Book/reference_Book",
-    "pages/progress_Bar/progress_Bar"
-  ],
-  "subPackages": [
-    {
-      "root": "packageA",
-      "pages": [
-        "pages/study/study"
-      ]
-    }
+    "pages/progress_Bar/progress_Bar",
+    "pages/kaoyan/study",
+    "pages/checkLogin/checkLogin"
   ],
   "window": {
     "backgroundTextStyle": "light",

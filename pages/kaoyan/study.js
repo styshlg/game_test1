@@ -1,13 +1,22 @@
 var Bmob = require('../../utils/Bmob-1.6.2.min.js');
 Bmob.initialize("7fa2bb4379cc0f8fc3ffeaeac878b848", "821887fa22b643a48a21b6af476cc0a1");
+var timestamp = Date.parse(new Date());
+timestamp = timestamp / 1000;
+//当前时间戳为：1403149534
+console.log("当前时间戳为：" + timestamp);
+var myDate = new Date();
+//myDate.toLocaleDateString(); //可以获取当前日期
+//myDate.toLocaleTimeString(); //可以获取当前时间
+console.log(myDate.toLocaleTimeString())
+console.log(myDate.toLocaleDateString())
 Page({
-  data:{
+  data: {
     time: "",
-    cpt:"",
-    liju1:"",
+    cpt: "",
+    liju1: "",
     liju2: "",
     liju3: "",
-    chinese1:"",
+    chinese1: "",
     chinese2: "",
     chinese3: "",
     counter: 0,
@@ -17,119 +26,99 @@ Page({
     id3: 3,
     id4: 4,
     today_num: 0,
-    word_now:0,
-    CET4_word_count:0,
-    true_num:0
+    word_now: 0,
+    kaoyan_word_count: 0,
+    true_num: 0
   },
 
   onLoad: function (options) {
     this.setData({ showNot: false })
-    const query1 = Bmob.Query('MYCET_4');
+    const query1 = Bmob.Query('kaoyan');
     query1.count().then(res => {
       console.log(res)
-      wx.setStorageSync('MYCET_4_length_1', res)
+      wx.setStorageSync('kaoyan_length_1', res)
     });
-    if (!wx.getStorageSync('MYCET_4_data_test')) {
+    if (!wx.getStorageSync('kaoyan_data_test')) {
       wx.setStorage({
-        key: 'MYCET_4_data_test',
-        data: 1,
+        key: 'kaoyan_data_test',
+        data: 0,
       })
     }
     this.searchSqlEnglish_1()
 
   },
-
-  searchSqlEnglish_1: function ()
-  {
+  searchSqlEnglish_1: function () {
     //保存数量
-    if (wx.getStorageSync('MYCET_4_length_1'))
-     {
+    if (wx.getStorageSync('kaoyan_length_1')) {
       this.setData({
-        CET4_word_count: wx.getStorageSync('MYCET_4_length_1')
+        kaoyan_word_count: wx.getStorageSync('kaoyan_length_1')
       })
     }
-    else
-    {
-        wx.setStorage({
-          key: 'MYCET_4_length_1',
-          data: 100,
-        })
+    else {
+      wx.setStorage({
+        key: 'kaoyan_length_1',
+        data: 100,
+      })
     }
-    console.log(this.CET4_word_count)
+    console.log(this.kaoyan_word_count)
     var that = this
-    try 
-    {
-      const query = Bmob.Query("MYCET_4");
-      const query1 = Bmob.Query('MYCET_4');
-      query1.count().then(res => 
-      {
+    try {
+      const query = Bmob.Query("kaoyan");
+      const query1 = Bmob.Query('kaoyan');
+      query1.count().then(res => {
         console.log(res)
-        wx.setStorageSync('MYCET_4_length_1', res)
+        wx.setStorageSync('kaoyan_length_1', res)
       });
-      that.data.true_num = wx.getStorageSync('MYCET_4_data_test')
-      query.equalTo("ID", "==", that.data.true_num + 1);
+      that.data.true_num = wx.getStorageSync('kaoyan_data_test')
+      query.equalTo("id", "==", that.data.true_num);
       query.find().then(res => {
         console.log(res)
-      });
-      query.equalTo("ID", "==", );
-      query.find().then(res => 
-      {
-        console.log(res)
-        console.log(res[0].objectId)
         console.log(res[0].word)
-        console.log(res[0].Chinese_Meaning)
-        console.log(res[0].chinese1)
-        console.log(res.length)
         that.setData({ content: res[0].word })
         wx.request
-        ({
-          url: 'https://api.shanbay.com/bdc/search/?word=' + res[0].word,
-          data: {},
-          method: 'GET',
-          success: function (res)
-           {
-            console.log(res)
-            that.setData
-            ({
-              pron: res.data.data.pronunciations,
-              pron_audio: res.data.data.audio_addresses,
-              definition: res.data.data.definition,
-            })
-            const innerAudioContext = wx.createInnerAudioContext()
-            innerAudioContext.autoplay = true
-            innerAudioContext.src = res.data.data.audio_addresses.uk[0]
-            innerAudioContext.onPlay(() => {
-            })
-            var id = res.data.data.conent_id
-            that.liju_find(that.data.true_num + 1)
-            if (wx.getStorageSync('word_CET4_collect')) 
-            {
-              var word_collect = wx.getStorageSync('word_CET4_collect')
+          ({
+            url: 'https://api.shanbay.com/bdc/search/?word=' + res[0].word,
+            data: {},
+            method: 'GET',
+            success: function (res) {
+              console.log(res)
+              that.setData
+                ({
+                  pron: res.data.data.pronunciations,
+                  pron_audio: res.data.data.audio_addresses,
+                  definition: res.data.data.definition,
+                })
+              const innerAudioContext = wx.createInnerAudioContext()
+              innerAudioContext.autoplay = true
+              innerAudioContext.src = res.data.data.audio_addresses.uk[0]
+              innerAudioContext.onPlay(() => {
+              })
+              var id = res.data.data.conent_id
+              that.liju_find(that.data.true_num )
+              if (wx.getStorageSync('word_kaoyan_collect')) {
+                var word_collect = wx.getStorageSync('word_kaoyan_collect')
+              }
+              else {
+                var word_collect = []
+              }
+              word_collect.push([that.data.counter, that.data.content, that.data.pron, that.data.pron_audio, that.data.defen, that.data.definition
+              ])
             }
-            else 
-            {
-              var word_collect = []
-            }
-            word_collect.push([that.data.counter, that.data.content, that.data.pron, that.data.pron_audio, that.data.defen, that.data.definition
-            ])
-           }
           });
       });
-        }
-     catch (error) 
-     {
-        wx.showToast({
-          title: '数据读取失败',
-          icon: 'loading',
-          duration: 2000
-        })
-      }
-     finally 
-     {
+    }
+    catch (error) {
+      wx.showToast({
+        title: '数据读取失败',
+        icon: 'loading',
+        duration: 2000
+      })
+    }
+    finally {
 
-     }
+    }
   },
-  
+
   show: function () {
     this.setData({
       showNot: true,
@@ -179,12 +168,11 @@ Page({
 
   },
   last: function (e) {
-    if (this.data.true_num + 1 >=0)
-    {
+    if (this.data.true_num >= 0) {
       this.setData({ showDaan: false })
       this.setData({ true_num: this.data.true_num - 1 })
-      wx.setStorageSync('MYCET_4_data_test', this.data.true_num)
-      console.log(wx.getStorageSync('MYCET_4_data_test'))
+      wx.setStorageSync('kaoyan_data_test', this.data.true_num)
+      console.log(wx.getStorageSync('kaoyan_data_test'))
       this.searchSqlEnglish_1()
     }
     else {
@@ -196,14 +184,13 @@ Page({
     }
   },
 
-  next: function (e) 
-  {
+  next: function (e) {
     this.setData({ showNot: false })
-    if (this.data.true_num + 1 < wx.getStorageSync('MYCET_4_length_1')) {
+    if (this.data.true_num + 1 <= wx.getStorageSync('kaoyan_length_1')) {
       this.setData({ showDaan: false })
       this.setData({ true_num: this.data.true_num + 1 })
-      wx.setStorageSync('MYCET_4_data_test', this.data.true_num)
-      console.log(wx.getStorageSync('MYCET_4_data_test'))
+      wx.setStorageSync('kaoyan_data_test', this.data.true_num)
+      console.log(wx.getStorageSync('kaoyan_data_test'))
       this.searchSqlEnglish_1()
     }
     else {
@@ -255,22 +242,20 @@ Page({
     })
     wx.showToast({ title: '收藏成功' })
   },
-  liju_find(id)
-  {
+  liju_find(id) {
     try {
-      const query = Bmob.Query("MYCET_4");
-      const query1 = Bmob.Query('MYCET_4');
+      const query = Bmob.Query("kaoyan");
+      const query1 = Bmob.Query('kaoyan');
       query1.count().then(res => {
         console.log(res)
-        wx.setStorageSync('MYCET_4_length_1', res)
+        wx.setStorageSync('kaoyan_length_1', res)
       });
-      query.equalTo("ID", "==", this.data.true_num + 1);
+      query.equalTo("id", "==", this.data.true_num );
       query.find().then(res => {
         console.log(res)
       });
-      query.equalTo("ID", "==", this.data.true_num + 1);
-      query.find().then(res => 
-      {
+      query.equalTo("id", "==", this.data.true_num);
+      query.find().then(res => {
         console.log(res)
         console.log(res[0].objectId)
         console.log(res[0].word)
@@ -323,7 +308,7 @@ Page({
       if (n >= 1450 && n < 2117) {
         this.setData
           ({
-            liju1: fileData2.searchliju1(n-726),
+            liju1: fileData2.searchliju1(n - 726),
             chinese1: fileData2.searchchinese1(n),
             liju2: fileData2.searchliju2(n),
             chinese2: fileData2.searchchinese2(n),

@@ -1,13 +1,15 @@
 {
 	"description": "项目配置文件。",
+  "cloudfunctionRoot": "cloudfunctions/",
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
 		"nodeModules": true,
-		"uglifyFileName": true
+		"autoAudits": true,
+		"uglifyFileName": false
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.4.1",
@@ -30,8 +32,15 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
-			"list": []
+			"current": 0,
+			"list": [
+				{
+					"id": -1,
+					"name": "TEST",
+					"pathName": "pages/Welcome/Welcome",
+					"scene": "1001"
+				}
+			]
 		}
 	}
 }
