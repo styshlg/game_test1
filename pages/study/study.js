@@ -1,6 +1,5 @@
-const app = getApp()
-var initData = 'this is first line\n this is second line'
-var extraLine = [];
+var Bmob = require('../../utils/Bmob-1.6.2.min.js');
+Bmob.initialize("7fa2bb4379cc0f8fc3ffeaeac878b848", "821887fa22b643a48a21b6af476cc0a1");
 Page({
   data: {
     time: "",

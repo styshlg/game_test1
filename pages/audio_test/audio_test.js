@@ -143,7 +143,7 @@ Page({
     this.setData({daan:true,true_num:this.data.true_num+1})
     const innerAudioContext = wx.createInnerAudioContext()
     innerAudioContext.autoplay = true
-    innerAudioContext.src = 'http://media-audio1.qiniu.baydn.com/us/n/ni/nice_v3.mp3'
+    innerAudioContext.src = 'https://media-audio1.qiniu.baydn.com/us/n/ni/nice_v3.mp3'
     innerAudioContext.onPlay(() => {
     })
     }

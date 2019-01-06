@@ -1,10 +1,10 @@
 <view class="book_list">
 学习进程</view>
 <view class="word_list">
-<view  style="font-size:40rpx ; font-weight:300; color:white;">大学英语四级</view>
+<view  style="font-size:40rpx ; font-weight:300; color:white;">考研词汇</view>
 </view>
-
- <view class="container">
+ <view class="pg1"> 
+ <!-- <view class="container"> -->
      <view class='progress_box'>
         <canvas class="progress_bg"   canvas-id="canvasProgressbg">  </canvas> 
         <canvas class="progress_canvas"   canvas-id="canvasProgress">  </canvas> 
@@ -13,17 +13,21 @@
             <text class='progress_info'> {{progress_txt}}</text>
         </view>     
     </view>
+</view> 
+
+<view class="word_list">
+<view  style="font-size:40rpx ; font-weight:300; color:white;">大学四级词汇</view>
 </view>
 
-   
-   
-<!-- <view class="wrap">
-  <view class="circle-box">
-    <canvas class="circle" style="z-index: -99; width:200px; height:200px;" canvas-id="canvasCircle">
-    </canvas>
-    <canvas class="circle" style="width:200px; height:200px;" canvas-id="canvasArcCir">
-    </canvas>
-    <view class="draw_btn" bindtap="drawCircle">开始动态绘制</view>
-  </view>
-</view> -->
+ <view class="pg2"> 
+     <view class='progress_box'>
+        <canvas class="progress_bg"   canvas-id="canvasProgressbg1">  </canvas> 
+        <canvas class="progress_canvas"   canvas-id="canvasProgress1">  </canvas> 
+        <view class="progress_text">
+            <view class="progress_dot"></view> 
+            <text class='progress_info'> {{progress_txt1}}</text>
+        </view>     
+    </view>
+</view>
+
 

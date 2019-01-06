@@ -1,7 +1,4 @@
-.font-face {
-font-family: Chalkboard;
-src: url('/assets/font/chalkboard.ttf'),
-}
+
 page{
   height: 100%;
   background-color: #00b26a;
@@ -273,7 +270,7 @@ page{
 .complete_bg{
   height: 1200rpx;
   width: 100%;
-  background-image: url('http://pic.yupoo.com/styshlg/3bc4261a/b987723a.jpg');
+  background-image: url('https://pic.yupoo.com/styshlg/3bc4261a/b987723a.jpg');
   background-size:cover;
 }
 .share_word{

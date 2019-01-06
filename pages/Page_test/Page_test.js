@@ -12,11 +12,11 @@ Page({
         url:  'https://pic.yupoo.com/styshlg/1c438670/349d5535.jpg'
       }, {
         link: '/packageA/pages/study/study',
-        url: 'http://pic.yupoo.com/styshlg/95419e57/99a4b91b.jpg'
+        url: 'https://pic.yupoo.com/styshlg/95419e57/99a4b91b.jpg'
       }
     ],
     indicatorDots: true,
-    autoplay: true,
+    autoplay: false,
     interval: 5000,
     duration: 1000,
     userInfo: {}
@@ -243,6 +243,11 @@ Page({
       wx.switchTab({
         url: '../yufa_test/yufa_test',
       })
+  },
+  kaoyan_card() {
+    wx.navigateTo({
+      url: '../kaoyan/study',
+    })
   },
   test8_card() {
     var num = wx.getStorageSync('word_num');

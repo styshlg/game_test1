@@ -1,4 +1,4 @@
-<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" current="{{swiperCurrent}}" bindchange="swiperChange">
+<!-- <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" current="{{swiperCurrent}}" bindchange="swiperChange">
       <block wx:for="{{imgUrls}}">
         <swiper-item>
            <navigator url="{{item.link}}" hover-class="navigator-hover">
@@ -6,42 +6,85 @@
            </navigator> 
         </swiper-item>
       </block>
-</swiper>
+</swiper> -->
+<view>
 <view class="word_list">
-<view  style="font-size:60rpx ; font-weight:600; color:white;">单词学习</view>
+<view  style="font-size:60rpx ; font-weight:600; color:black;">词汇</view>
 </view>
 <view>
     <view class="flex-row" style="display: flex;flex-direction: row">
-        <view class="flex-view-item_1" bindtap="star_CET4">大学英语四级</view>
-        <view class="flex-view-item_1" bindtap="test2_card">大学英语六级</view>
-    </view>
+   <image class='sizeModal-img' mode='aspectFill' src=' https://pic.yupoo.com/styshlg/c95de914/ad9c76ee.png' bindtap="star_CET4" ></image>
+      <image class='sizeModal-img' mode='aspectFill' src='https://pic.yupoo.com/styshlg/80cbfc3d/d39b6d51.png' bindtap="test1_card" ></image>
+      <image class='sizeModal-img' mode='aspectFill' src=' https://pic.yupoo.com/styshlg/f58ce4de/21302fd3.png' bindtap="kaoyan_card" ></image>
+      <image class='sizeModal-img' mode='aspectFill' src=' https://pic.yupoo.com/styshlg/31eaa265/d1baf11c.png' ></image>
+  
+        <!-- <view  class="flex-view-item_1" bindtap="star_CET4">四级</view> -->
+        <!-- <view style="float:right"class="flex-view-item_1" bindtap="test2_card">六级</view>
+        <view class="flex-view-item_1" bindtap="kaoyan_card">考研</view>
+        <view style="float:right" class="flex-view-item_1" bindtap="test2_card">托福</view> -->
 </view>
-<view>
+</view>
+<view class="flex-row1" style="display: flex;flex-direction: row">
+<view class='text_line1'>
+<text bindtap="star_CET4">四级</text>
+</view>
+<view class='text_line1'>
+<text bindtap="test1_card">六级</text>
+</view>
+<view class='text_line1'>
+<text  bindtap="kaoyan_card">考研</text>
+</view>
+<view class='text_line1'>
+<text>托福</text>
+</view>
+</view>
+</view>
+<!-- <view>
     <view class="flex-row" style="display: flex;flex-direction: row">
-        <!-- <image class="flex-view-item_1" src='http://pic.yupoo.com/styshlg/e36727ae/96b57f6e.jpg' bindtap="star_study"></image> -->
-        <button class="flex-view-item_1" >托福单词</button>
+         <button class="flex-view-item_1" >托福</button>
+        <button class="flex-view-item_1" bindtap="kaoyan_card" >考研</button>
     </view>
-</view>
+</view> -->
  <view class="word_list">
-<view  style="font-size:60rpx ; font-weight:600; color:white;">词汇练习</view>
+<view  style="font-size:60rpx ; font-weight:600; color:black;">练习
 </view>
-<view>
+</view>
+<!-- <view>
   <view class="flex-row" style="display: flex;flex-direction: row">
         <view class="flex-view-item_1" bindtap="test7_card">语法测试</view>
         <view class="flex-view-item_1" bindtap="test2_card">词汇测试</view>
     </view>
-</view>
-<view>
+</view> -->
+<!-- <view>
   <view class="flex-row" style="display: flex;flex-direction: row">
         <view class="flex-view-item_1" bindtap="test1_card">背词条</view>
         <view class="flex-view-item_1" bindtap="progress_Bar">学习进程</view>
-    </view>
+    </view> -->
+     <view class="flex-row" style="display: flex;flex-direction: row">
+    <image class='sizeModal-img1' mode='aspectFill' src=' https://pic.yupoo.com/styshlg/79eb7374/c18b5ace.png' bindtap="test7_card" ></image>
+      <image class='sizeModal-img1' mode='aspectFill' src=' https://pic.yupoo.com/styshlg/ebfea407/abc6d10a.png' bindtap="test2_card" ></image>
+      <image class='sizeModal-img1' mode='aspectFill' src=' https://pic.yupoo.com/styshlg/124aa41b/79b5dea9.png' bindtap="test1_card" ></image>
+        <!-- <view  class="flex-view-item_1" bindtap="star_CET4">四级</view> -->
+        <!-- <view style="float:right"class="flex-view-item_1" bindtap="test2_card">六级</view>
+        <view class="flex-view-item_1" bindtap="kaoyan_card">考研</view>
+        <view style="float:right" class="flex-view-item_1" bindtap="test2_card">托福</view> -->
+        </view>
+  <view class="flex-row1" style="display: flex;flex-direction: row">
+<view class='text_line2'>
+<text bindtap="test7_card">学语法</text>
 </view>
+<view class='text_line2'>
+<text bindtap="test2_card" >练单词</text>
+</view>
+<view class='text_line2'>
+<text bindtap="test1_card" >背词条</text>
+</view>
+</view>
+
 <view class="word_list">
-<view  style="font-size:60rpx ; font-weight:600; color:white;">单词周计划</view>
+<view  style="font-size:60rpx ; font-weight:600; color:black;">综合</view>
 </view>
-<view>
-<view class="flex-row" style="display: flex;flex-direction: row">
+<!-- <view class="flex-row" style="display: flex;flex-direction: row">
       <view class="flex-view-item_1" bindtap="test8_card">单词周计划</view>
       <view class="flex-view-item_1" bindtap="reference_Book">参考用书</view>
       </view> 
@@ -51,5 +94,22 @@
       <view class="flex-view-item_1" bindtap="about">联系我们</view>
       <view class="flex-view-item_1" bindtap="about">清空数据</view>    
 </view>
+</view> -->
+ <view class="flex-row" style="display: flex;flex-direction: row">
+    <image class='sizeModal-img1' mode='aspectFill' src=' https://pic.yupoo.com/styshlg/48ccb23d/db9c7083.png' bindtap="test8_card" ></image>
+      <image class='sizeModal-img1' mode='aspectFill' src=' https://pic.yupoo.com/styshlg/dd519b52/78da240d.png' bindtap="reference_Book" ></image>
+      <image class='sizeModal-img1' mode='aspectFill' src=' https://pic.yupoo.com/styshlg/4dc1b5ae/6bf0b39e.png' bindtap="about" ></image>
+    </view>
+<view class="flex-row1" style="display: flex;flex-direction: row">
+<view class='text_line3'>
+<text bindtap="test8_card"  >单词周计划</text>
 </view>
+<view class='text_line3'>
+<text bindtap="reference_Book">参考书</text>
+</view>
+<view class='text_line3'>
+<text bindtap="about">购书方式</text>
+</view>
+</view>
+<button class="kf_button" open-type="contact" session-from="weapp" text='客户服务'> <image class="kf_image" src="https://pic.yupoo.com/styshlg/eb22823b/a5827a80.png"></image></button>
  <view class="blank"></view>
